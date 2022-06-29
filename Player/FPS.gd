@@ -1,14 +1,14 @@
 extends KinematicBody
 
 var speed = 7
-const ACCEL_DEFAULT = 7
-const ACCEL_AIR = 1
+const ACCEL_DEFAULT = 20
+const ACCEL_AIR = 3
 onready var accel = ACCEL_DEFAULT
 var gravity = 9.8
 var jump = 5
 
 var cam_accel = 40
-var mouse_sense = 0.1
+var mouse_sense = 0.2
 var snap
 
 var direction = Vector3()
