@@ -62,12 +62,15 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		snap = Vector3.ZERO
 		gravity_vec = Vector3.UP * jump
-	
+	var grapplingPull = $Head/GrappleCast.calcGrappling()
 	#make it move
 	velocity = velocity.linear_interpolate(direction * speed, accel * delta)
 	movement = velocity + gravity_vec
+	movement += grapplingPull
 	
-	move_and_slide_with_snap(movement, snap, Vector3.UP)
-	
+	if grapplingPull == Vector3.ZERO:
+		move_and_slide_with_snap(movement, snap, Vector3.UP)
+	else:
+		move_and_slide(movement, Vector3.UP)
 	
 	
