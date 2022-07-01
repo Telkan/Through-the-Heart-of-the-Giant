@@ -14,6 +14,12 @@ config/name="Through The Heart Of The Giant"
 run/main_scene="res://TestBench/Spatial.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/fullscreen=true
+
 [input]
 
 z={
@@ -55,7 +61,12 @@ GrapD={
 [physics]
 
 common/enable_pause_aware_picking=true
+3d/default_linear_damp=0.0
+3d/default_angular_damp=0.0
+common/default_angular_damp=0.1
+common/default_linear_damp=0.1
 
 [rendering]
 
+environment/default_clear_color=Color( 0, 0, 0, 1 )
 environment/default_environment="res://default_env.tres"

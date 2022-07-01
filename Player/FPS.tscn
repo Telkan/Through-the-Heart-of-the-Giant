@@ -26,8 +26,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0 )
 
 [node name="Camera" type="Camera" parent="Head"]
 fov = 90.0
+far = 1e+06
 
 [node name="GrappleCast" type="RayCast" parent="Head"]
 enabled = true
 cast_to = Vector3( 0, 0, -500 )
 script = ExtResource( 2 )
+
+[node name="SpotLight" type="SpotLight" parent="Head"]
+spot_range = 6.3
+spot_angle = 35.9

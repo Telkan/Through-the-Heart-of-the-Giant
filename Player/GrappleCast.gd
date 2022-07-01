@@ -5,7 +5,7 @@ onready var player = get_parent().get_parent()
 # var a = 2
 # var b = "text"
 var grapplingTarget = Vector3.INF
-var grapplingSpeed = 20
+var grapplingSpeed = 10
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
@@ -15,10 +15,10 @@ func _process(_delta):
 		if(is_colliding()):
 			grapplingTarget = get_collision_point()
 	if(Input.is_action_pressed("GrapG")):
-		grapplingSpeed += 4 *_delta
+		grapplingSpeed += 50 *_delta
 	if(Input.is_action_just_released("GrapG")):
 		grapplingTarget = Vector3.INF
-		grapplingSpeed = 20
+		grapplingSpeed = 10
 		
 	pass # Replace with function body.
 	

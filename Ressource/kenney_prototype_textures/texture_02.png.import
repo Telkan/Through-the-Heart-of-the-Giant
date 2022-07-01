@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/texture_02.png-e7a0a5f8118c051835f95070451cadd1.stex"
+path="res://.import/texture_02.png-c22fec3c74b1d483f7ea10366cea4dd2.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ressource/kenney_prototype_textures/dark/texture_02.png"
-dest_files=[ "res://.import/texture_02.png-e7a0a5f8118c051835f95070451cadd1.stex" ]
+source_file="res://Ressource/kenney_prototype_textures/texture_02.png"
+dest_files=[ "res://.import/texture_02.png-c22fec3c74b1d483f7ea10366cea4dd2.stex" ]
 
 [params]
 
