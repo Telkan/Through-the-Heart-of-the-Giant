@@ -1,7 +1,7 @@
 extends RayCast
 onready var player = get_parent().get_parent()
-onready var grappleOrient = get_parent().find_node("GrappleOrientation")
-onready var grapple = grappleOrient.find_node("Grapple")
+onready var grappleOrient = player.find_node("GrappleOrientation")
+onready var grapple = player.find_node("Grapple")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -29,13 +29,13 @@ func drawGrapple():
 	grappleOrient.look_at(grapplingTarget,Vector3.UP)
 	var length = grapplingTarget.distance_squared_to(player.global_transform.origin)
 	grapple.height = length
-	grapple.translation.z = length/2
+	grapple.translation.z = -length/2
 	
 
 func calcGrappling() -> Vector3:
 	if grapplingTarget == Vector3.INF:
 		return Vector3.ZERO
-	drawGrapple()
+
 	
 	var direction : Vector3 = (grapplingTarget - player.global_transform.origin).normalized()
 	return direction * grapplingSpeed

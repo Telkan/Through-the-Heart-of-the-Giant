@@ -43,11 +43,10 @@ script = ExtResource( 2 )
 spot_range = 6.3
 spot_angle = 35.9
 
-[node name="GrappleOrientation" type="Spatial" parent="Head"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.747441, 0 )
+[node name="GrappleOrientation" type="Spatial" parent="."]
 
-[node name="Grapple" type="CSGCylinder" parent="Head/GrappleOrientation"]
-transform = Transform( -4.37114e-08, 1, 0, -1, -4.37114e-08, 0, 0, 0, 1, 0, 0, 0 )
+[node name="Grapple" type="CSGCylinder" parent="GrappleOrientation"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 0, 0 )
 radius = 0.1
 sides = 12
 material = SubResource( 3 )

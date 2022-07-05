@@ -68,6 +68,7 @@ func _physics_process(delta):
 	else:
 		move_and_slide(movement, Vector3.UP)
 		gravity_vec = Vector3.ZERO
+		$Head/GrappleCast.drawGrapple()
 		
 	camera.set_as_toplevel(true)
 	camera.global_transform.origin = camera.global_transform.origin.linear_interpolate(head.global_transform.origin, cam_accel * delta)
