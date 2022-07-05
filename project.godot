@@ -20,6 +20,18 @@ window/size/width=1920
 window/size/height=1080
 window/size/fullscreen=true
 
+[importer_defaults]
+
+texture={
+"flags/filter": false
+}
+texture_3d={
+"flags/filter": false
+}
+texture_array={
+"flags/filter": false
+}
+
 [input]
 
 z={
@@ -69,4 +81,5 @@ common/default_linear_damp=0.1
 [rendering]
 
 environment/default_clear_color=Color( 0, 0, 0, 1 )
+quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"
