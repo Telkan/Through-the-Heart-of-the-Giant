@@ -1,0 +1,14 @@
+# Made in Blockbench 4.2.5
+newmtl m_0
+map_Kd Floor.png 
+newmtl m_1
+map_Kd Pillar.png 
+newmtl m_2
+map_Kd Door.png 
+newmtl m_4
+map_Kd Frame1.png 
+newmtl m_5
+map_Kd DoorWall.png 
+newmtl m_6
+map_Kd Ceiling.png 
+newmtl none

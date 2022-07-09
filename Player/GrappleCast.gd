@@ -5,17 +5,17 @@ onready var grapple = player.find_node("Grapple")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
-var grapplingTarget = Vector3.INF
-var grapplingSpeed = 5
+var grapplingTarget := Vector3.INF
+var grapplingSpeed := 5
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
 func _process(_delta):
 	if(Input.is_action_just_pressed("GrapG")):
-		grapple.set_visible(true)
 		if(is_colliding()):
 			grapplingTarget = get_collision_point()
+			grapple.set_visible(true)
 	if(Input.is_action_pressed("GrapG")):
 		grapplingSpeed += 1 *_delta
 	if(Input.is_action_just_released("GrapG")):
